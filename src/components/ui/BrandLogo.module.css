@@ -1,0 +1,67 @@
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.logoLink:hover .iconImg {
+  transform: scale(1.06) rotate(3deg);
+  filter: drop-shadow(0 0 12px rgba(31, 95, 191, 0.5));
+}
+
+.iconWrapper {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--transition-base), filter var(--transition-base);
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 2vw, 1.12rem);
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.highlight {
+  color: var(--color-lake-blue);
+  font-weight: 800;
+}
+
+.onDark .brandName {
+  color: var(--color-white);
+}
+
+.onDark .highlight {
+  color: #55A2FF;
+}
+
+@media (max-width: 400px) {
+  .logoLink {
+    gap: 0.5rem;
+  }
+  .iconWrapper {
+    width: 32px;
+    height: 32px;
+  }
+  .brandName {
+    font-size: 0.92rem;
+  }
+}

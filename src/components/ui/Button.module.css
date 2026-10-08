@@ -1,0 +1,93 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+/* Sizes */
+.sm {
+  font-size: var(--text-xs);
+  padding: 0.45rem 0.875rem;
+}
+
+.md {
+  font-size: var(--text-sm);
+  padding: 0.7rem 1.35rem;
+}
+
+.lg {
+  font-size: var(--text-base);
+  padding: 0.9rem 1.75rem;
+}
+
+/* Variants */
+.primary {
+  background-color: var(--color-maple-red);
+  color: var(--color-white);
+  border: 1px solid var(--color-maple-red);
+  box-shadow: 0 2px 8px rgba(200, 55, 45, 0.28);
+}
+
+.primary:hover {
+  background-color: var(--color-maple-red-hover);
+  border-color: var(--color-maple-red-hover);
+  box-shadow: 0 4px 14px rgba(200, 55, 45, 0.38);
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-frost);
+}
+
+.secondary:hover {
+  background-color: var(--color-white);
+  border-color: var(--color-lake-blue);
+  color: var(--color-lake-blue);
+}
+
+/* Dark context for secondary button (e.g. in hero) */
+.secondaryHero {
+  background-color: rgba(220, 230, 238, 0.08);
+  color: #F0F5FA;
+  border: 1px solid rgba(220, 230, 238, 0.28);
+  backdrop-filter: blur(8px);
+}
+
+.secondaryHero:hover {
+  background-color: rgba(220, 230, 238, 0.16);
+  border-color: rgba(220, 230, 238, 0.6);
+  color: #FFFFFF;
+}
+
+.ghost {
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid transparent;
+}
+
+.ghost:hover {
+  background-color: var(--color-lake-blue-subtle);
+  color: var(--color-lake-blue);
+}
+
+.fullWidth {
+  width: 100%;
+}

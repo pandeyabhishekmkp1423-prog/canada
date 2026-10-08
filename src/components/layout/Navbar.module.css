@@ -1,0 +1,143 @@
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--navbar-height, 72px);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  transition: background-color var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base), backdrop-filter var(--transition-base);
+}
+
+.transparent {
+  background-color: rgba(11, 23, 36, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(220, 230, 238, 0.08);
+}
+
+.scrolled {
+  background-color: rgba(245, 248, 250, 0.94);
+  border-bottom: 1px solid var(--border-subtle);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px rgba(11, 23, 36, 0.06);
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  gap: var(--space-4);
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 1.35rem;
+  height: 100%;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+  padding: 0.4rem 0;
+  white-space: nowrap;
+}
+.navLink:hover, .navLinkActive { color: var(--color-lake-blue); }
+.transparent .navLink { color: #C3D5E7; }
+.transparent .navLink:hover, .transparent .navLinkActive { color: #FFFFFF; }
+
+.dropdownContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.dropdownTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.4rem 0;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+.transparent .dropdownTrigger { color: #C3D5E7; }
+.transparent .dropdownTrigger:hover { color: #FFFFFF; }
+.dropdownTrigger:hover { color: var(--color-lake-blue); }
+.chevron { transition: transform var(--transition-fast); }
+.chevronOpen { transform: rotate(180deg); }
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% - 6px);
+  left: -1rem;
+  width: 320px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.6rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  z-index: 60;
+}
+
+.dropdownItem {
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast);
+}
+.dropdownItem:hover { background-color: var(--color-frost-subtle); }
+.dropdownTitle { font-family: var(--font-display); font-weight: 600; font-size: var(--text-sm); color: var(--text-primary); }
+.dropdownTagline { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.35; margin-top: 0.15rem; }
+
+.actions { display: flex; align-items: center; gap: var(--space-3); flex-shrink: 0; height: 100%; }
+.headerCta { display: inline-flex; align-items: center; }
+
+.menuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+.menuButton:hover { background-color: var(--color-frost-subtle); }
+.transparent .menuButton { color: var(--color-white); border-color: rgba(220, 230, 238, 0.18); background: rgba(220, 230, 238, 0.06); }
+.transparent .menuButton:hover { background: rgba(220, 230, 238, 0.15); border-color: rgba(220, 230, 238, 0.35); }
+
+@media (max-width: 1140px) {
+  .desktopNav { display: none; }
+  .menuButton { display: flex; }
+}
+@media (max-width: 640px) {
+  .headerCta { display: none; }
+}

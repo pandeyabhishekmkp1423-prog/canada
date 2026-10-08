@@ -1,0 +1,83 @@
+.section {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-20);
+  background-color: var(--bg-primary);
+}
+
+.bannerCard {
+  background: linear-gradient(135deg, #0B1724 0%, #10243A 60%, #070f1a 100%);
+  border: 1px solid rgba(220, 230, 238, 0.16);
+  border-radius: var(--radius-xl);
+  padding: clamp(2rem, 6vw, 4.5rem);
+  color: var(--color-white);
+  box-shadow: 0 24px 64px -16px rgba(11, 23, 36, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.glowBlob {
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  border-radius: var(--radius-full);
+  background: radial-gradient(circle, rgba(31, 95, 191, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+}
+
+.badgeRow {
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.15;
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.02em;
+}
+
+.desc {
+  font-size: var(--text-lg);
+  color: #C6D8E8;
+  line-height: 1.65;
+  margin-bottom: var(--space-8);
+}
+
+.actionRow {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.checkList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  font-size: var(--text-xs);
+  color: #9AB4CA;
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(220, 230, 238, 0.12);
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.checkMark {
+  color: #55E1A1;
+  font-weight: 700;
+}

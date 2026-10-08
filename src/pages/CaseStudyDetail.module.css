@@ -1,0 +1,63 @@
+.page {
+  padding-top: calc(var(--navbar-height) + var(--space-12));
+  padding-bottom: var(--space-20);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-lake-blue);
+  margin-bottom: var(--space-6);
+}
+
+.header {
+  max-width: 820px;
+  margin-bottom: var(--space-10);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.lead {
+  font-size: var(--text-xl);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.statCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-8);
+}
+
+.statHighlight {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--color-lake-blue);
+  margin-bottom: var(--space-4);
+}
+
+.bodyText {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+}
+
+.actionRow {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}

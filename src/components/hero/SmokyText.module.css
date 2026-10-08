@@ -1,0 +1,35 @@
+.wrapper {
+  position: relative;
+  display: block;
+  min-height: 2.5em;
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+}
+
+.headlineLine {
+  display: block;
+}
+
+.screenReaderOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    min-height: 3.2em;
+    font-size: clamp(2.1rem, 7vw, 3rem);
+  }
+}
